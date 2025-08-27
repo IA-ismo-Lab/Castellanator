@@ -1,0 +1,35 @@
+# yt-dlp executable (downloaded automatically)
+yt-dlp.exe
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Process outputs
+output/
+temp/
+
+# Temporary files
+temp_chunk_*.mp3
+*.tmp
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# yt-dlp cache
+.yt-dlp/
