@@ -1,34 +1,28 @@
 @echo off
 echo ============================================
-echo Castellanator - YouTube Audio Translator
+echo Castellanator - AI Content Translator
 echo ============================================
 echo.
 echo Activating virtual environment...
 call .venv\Scripts\activate.bat
 echo.
-echo Enter your Gemini API key:
-set /p api_key=
+echo Starting Castellanator...
 echo.
-echo Enter the YouTube URL:
-set /p url=
-echo.
-echo Processing... Please wait...
-echo.
-python src/youtube_audio_processor.py "%url%" "%api_key%"
+python youtube_audio_processor.py
 echo.
 echo ============================================
-echo PROCESS COMPLETED SUCCESSFULLY!
+echo SESSION COMPLETED
 echo ============================================
 echo.
-echo You can find your files in the 'output' folder:
+echo Your files are saved in the 'output' folder:
 echo 📁 %CD%\output\
 echo.
 echo Each conversion creates a timestamped folder with:
-echo 🎵 audio.mp3 (Original English audio)
-echo 📝 transcript.txt (English transcription)  
+echo 🎵 audio.mp3 (Original audio)
+echo 📝 transcript.txt (English transcript)
 echo 🌍 translated.txt (Spanish translation)
 echo 🔊 output.mp3 (Spanish audio)
 echo.
-echo Temporary files are kept in 'temp' folder for analysis.
+echo PDF files should be placed in the 'pdf' folder.
 echo.
 pause

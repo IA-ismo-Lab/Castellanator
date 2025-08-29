@@ -34,6 +34,12 @@ REM Install Python requirements
 echo Installing Python requirements...
 pip install -r requirements.txt
 
+REM Create necessary folders
+echo Creating project folders...
+if not exist output mkdir output
+if not exist pdf mkdir pdf
+if not exist temp mkdir temp
+
 echo.
 echo ============================================
 echo Installation completed successfully!
@@ -41,11 +47,16 @@ echo ============================================
 echo.
 echo To run Castellanator:
 echo 1. Double-click start_processor.bat
-echo 2. Or run: python src/youtube_audio_processor.py "YOUTUBE_URL" "GEMINI_API_KEY"
+echo 2. Or run: python youtube_audio_processor.py
 echo.
 echo Project structure:
-echo 📁 src/ - Source code
 echo 📁 output/ - Your converted files
+echo 📁 pdf/ - Place your PDF files here
 echo 📁 temp/ - Temporary processing files
+echo.
+echo Usage:
+echo - Choose option 1 for YouTube videos
+echo - Choose option 2 for PDF documents
+echo - Place PDFs in the pdf/ folder first
 echo.
 pause

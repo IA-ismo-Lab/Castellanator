@@ -1,9 +1,22 @@
-# 🎧 Castellanator - AI-Powered YouTube Audio Translator
+# 🎧 Castellanator - AI-Powered Content Translator
 
 [![By Grok Code Fast](https://img.shields.io/badge/By-Grok%20Code%20Fast-blue?style=for-the-badge&logo=ai)](https://www.linkedin.com/newsletters/ia-ismo-7013065703138177024/)
 [![IA-ismo LAB](https://img.shields.io/badge/IA--ismo-LAB-orange?style=for-the-badge)](https://www.linkedin.com/newsletters/ia-ismo-7013065703138177024/)
 
-**Professional AI application** that transforms any YouTube video into Spanish audio content. Castellanator intelligently downloads English audio, transcribes it using advanced speech recognition, translates to Spanish with Gemini AI, and generates natural Spanish audio - perfect for professionals who want to consume content efficiently.
+**Professional AI application** that transforms YouTube videos and PDF documents into Spanish audio content. Castellanator intelligently processes English content through advanced speech recognition and AI translation, generating natural Spanish audio - perfect for professionals who want to consume content efficiently in their preferred language.
+
+## ✨ Key Features
+
+- 🤖 **AI-Powered Processing** - Advanced speech recognition and translation
+- 🎵 **Dual Content Support** - YouTube videos and PDF documents
+- 📝 **Accurate Transcription** - OpenAI Whisper with smart chunking
+- 🌍 **Professional Translation** - Google Gemini AI integration
+- 🔊 **Natural Voice Synthesis** - Google Text-to-Speech
+- 📄 **PDF Text Extraction** - Multiple extraction methods for reliability
+- 📁 **Organized Workflow** - Timestamped outputs prevent conflicts
+- ⚡ **Smart Optimization** - Automatic chunking for long content
+- 🛡️ **Professional Structure** - Clean, maintainable codebase
+- 🎯 **Interactive Menu** - User-friendly interface for easy operation
 
 ## ✨ Key Features
 
@@ -18,13 +31,15 @@
 
 ## ✨ Features
 
-- 🚀 **One-click processing** - Just provide a YouTube URL
-- 🎵 **High-quality audio download** - Best available audio format
+- 🚀 **One-click processing** - Just provide a YouTube URL or PDF file path
+- 🎵 **High-quality audio download** - Best available audio format from YouTube
+- 📄 **PDF text extraction** - Multiple methods for reliable text extraction
 - 📝 **Accurate transcription** - Powered by OpenAI Whisper
 - 🌍 **Professional translation** - Using Google Gemini AI
 - 🔊 **Natural Spanish audio** - Google Text-to-Speech
 - 📁 **Organized outputs** - Timestamped folders prevent overwrites
-- ⚡ **Smart chunking** - Handles long videos efficiently
+- ⚡ **Smart chunking** - Handles long videos and documents efficiently
+- 🎯 **Interactive menu** - Easy-to-use interface for all operations
 
 ## ⚙️ Installation
 
@@ -57,9 +72,16 @@ test.bat
 
 ### Run Castellanator
 ```bash
-# Double-click start_processor.bat or run:
-python src/youtube_audio_processor.py "https://www.youtube.com/watch?v=VIDEO_ID" "YOUR_GEMINI_API_KEY"
+# Double-click start_processor.bat to open the interactive menu
+# Or run directly:
+python youtube_audio_processor.py
 ```
+
+The interactive menu allows you to:
+- Process YouTube videos
+- Process PDF documents
+- View conversion history
+- Clean up temporary files
 
 ### View Conversion History
 ```bash
@@ -73,11 +95,17 @@ src/list_conversions.bat
 src/cleanup.bat
 ```
 
-### Cleanup Temporary Files
+### Prepare for GitHub
 ```bash
-# Remove temporary processing files:
-src/cleanup.bat
+# Prepare your project for GitHub publication:
+prepare_github.bat
 ```
+
+This script will:
+- Initialize Git repository
+- Add all project files
+- Create professional commit message
+- Provide instructions for GitHub upload
 
 ## 📋 Requirements
 
@@ -90,19 +118,22 @@ src/cleanup.bat
 ```
 Castellanator/
 ├── 📄 README.md              # Documentation
-├── 📄 .gitignore             # Git ignore rules
+├── 📄 LICENSE                # MIT License
 ├── 📄 requirements.txt       # Python dependencies
 ├── ⚙️ install.bat            # One-click installation
-├── 🚀 start_processor.bat    # Main processor
-└── 📁 src/                   # Source code
-    ├── 🐍 youtube_audio_processor.py
-    └── 📋 list_conversions.bat (hidden utility)
+├── 🚀 start_processor.bat    # Main processor launcher
+├── 🧪 test.bat               # System verification
+├── 📁 output/                # Processed content outputs
+├── 📁 pdf/                   # PDF processing workspace
+├── 📁 temp/                  # Temporary processing files
+└── 🐍 youtube_audio_processor.py  # Main application
 ```
 
 ## 📂 Output Structure
 
 After processing, your files are organized as follows:
 
+### YouTube Processing Output:
 ```
 output/
 └── castellanator_20231201_143022/
@@ -110,26 +141,55 @@ output/
     ├── 📝 transcript.txt     # English transcription
     ├── 🌍 translated.txt     # Spanish translation
     └── 🔊 output.mp3         # Spanish audio
+```
 
+### PDF Processing Output:
+```
+procesos/
+└── conversion_20231201_143022/
+    ├── 📄 original_text.txt  # Extracted text from PDF
+    ├── 🌍 translated.txt     # Spanish translation
+    └── 🔊 output.mp3         # Spanish audio
+```
+
+### Temporary Files:
+```
 temp/
 └── temp_chunk_*.mp3          # Processing chunks (kept for analysis)
+
+pdf/
+└── [PDF workspace files]     # PDF processing workspace
 ```
 
 ## 🔧 How It Works
 
+### YouTube Processing:
 1. **Download** - Extracts audio from YouTube video
 2. **Transcribe** - Converts speech to English text using Whisper
 3. **Translate** - Translates to Spanish using Gemini AI
 4. **Generate** - Creates Spanish audio using Google TTS
 
+### PDF Processing:
+1. **Extract** - Extracts text from PDF using multiple methods
+2. **Translate** - Translates to Spanish using Gemini AI
+3. **Generate** - Creates Spanish audio using Google TTS
+
+### Interactive Menu:
+- Choose between YouTube and PDF processing
+- Enter URLs or file paths
+- Configure API keys
+- Monitor progress with real-time feedback
+
 ## 🎯 Professional Use Cases
 
-- 💼 **Business Intelligence** - Stay updated with industry conferences in Spanish
-- 🎓 **Continuous Learning** - Transform educational content for efficient consumption
-- 🌍 **Language Professionals** - Create bilingual content for analysis
-- ⏰ **Time Optimization** - Consume high-value content during commutes
-- 📈 **Content Creation** - Generate Spanish versions of English content
-- 🔬 **Research & Analysis** - Transcribe and translate for academic purposes
+- 💼 **Business Intelligence** - Stay updated with industry conferences and documents in Spanish
+- 🎓 **Continuous Learning** - Transform educational content and research papers for efficient consumption
+- 🌍 **Language Professionals** - Create bilingual content from videos and documents for analysis
+- ⏰ **Time Optimization** - Consume high-value content during commutes and breaks
+- 📈 **Content Creation** - Generate Spanish versions of English videos and documents
+- 🔬 **Research & Analysis** - Transcribe, translate, and analyze academic content
+- 📚 **Document Processing** - Convert technical papers and reports to audio format
+- 🎧 **Accessibility** - Make written content accessible through audio conversion
 
 ## 🤝 Contributing
 
