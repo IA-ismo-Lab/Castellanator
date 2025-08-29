@@ -9,6 +9,7 @@
 
 - 🤖 **AI-Powered Processing** - Advanced speech recognition and translation
 - 🎵 **Dual Content Support** - YouTube videos and PDF documents
+- 🎧 **Audio File Transcription** - Transcribe MP3/M4A files to English text and Spanish
 - 📝 **Accurate Transcription** - OpenAI Whisper with smart chunking
 - 🌍 **Professional Translation** - Google Gemini AI integration
 - 🔊 **Natural Voice Synthesis** - Google Text-to-Speech
@@ -77,6 +78,18 @@ test.bat
 python youtube_audio_processor.py
 ```
 
+### Audio Transcriber (Text Only)
+```bash
+# Transcribe audio files to English text and Spanish translation:
+python audio_transcriber.py "path/to/audio.mp3" YOUR_GEMINI_API_KEY
+
+# Test the audio transcriber:
+test_audio.bat
+
+# See usage examples:
+example_audio.bat
+```
+
 The interactive menu allows you to:
 - Process YouTube videos
 - Process PDF documents
@@ -120,12 +133,18 @@ Castellanator/
 ├── 📄 README.md              # Documentation
 ├── 📄 LICENSE                # MIT License
 ├── 📄 requirements.txt       # Python dependencies
+├── 📄 config.example.ini     # Configuration template
+├── 📄 config_audio.ini       # Audio transcriber config
 ├── ⚙️ install.bat            # One-click installation
 ├── 🚀 start_processor.bat    # Main processor launcher
 ├── 🧪 test.bat               # System verification
-├── 📁 output/                # Processed content outputs
+├── 🧪 test_audio.bat         # Audio transcriber test
+├── � example_audio.bat      # Audio transcriber examples
+├── �📁 output/                # YouTube/PDF processing outputs
 ├── 📁 pdf/                   # PDF processing workspace
 ├── 📁 temp/                  # Temporary processing files
+├── 📁 transcriptions/        # Audio transcription outputs
+├── 🎧 audio_transcriber.py   # Audio file transcription tool
 └── 🐍 youtube_audio_processor.py  # Main application
 ```
 
@@ -174,6 +193,12 @@ pdf/
 2. **Translate** - Translates to Spanish using Gemini AI
 3. **Generate** - Creates Spanish audio using Google TTS
 
+### Audio File Processing (Text Only):
+1. **Load** - Validates and loads audio file (MP3/M4A/WAV/FLAC/AAC)
+2. **Transcribe** - Converts speech to English text using Whisper
+3. **Translate** - Translates to Spanish using Gemini AI
+4. **Save** - Organizes results in timestamped folders
+
 ### Interactive Menu:
 - Choose between YouTube and PDF processing
 - Enter URLs or file paths
@@ -189,7 +214,9 @@ pdf/
 - 📈 **Content Creation** - Generate Spanish versions of English videos and documents
 - 🔬 **Research & Analysis** - Transcribe, translate, and analyze academic content
 - 📚 **Document Processing** - Convert technical papers and reports to audio format
-- 🎧 **Accessibility** - Make written content accessible through audio conversion
+- 🎧 **Podcast Analysis** - Understand foreign language podcasts through text transcription
+- 🎵 **Audio Content Review** - Review audio interviews and recordings in your language
+- 📝 **Content Transcription** - Create text versions of audio content for documentation
 
 ## 🤝 Contributing
 
